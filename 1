@@ -1,0 +1,21 @@
+
+This data set consists of the physical parameters of three species of flower — Versicolor, Setosa and Virginica. The numeric parameters which the dataset contains are Sepal width, Sepal length, Petal width and Petal length. In this data we will be predicting the classes of the flowers based on these parameters.The data consists of continuous numeric values which describe the dimensions of the respective features. We will be training the model based on these features.
+
+from sklearn.datasets import load_iris
+
+# Load the Iris dataset
+iris = load_iris()
+
+# The dataset is now loaded as a Bunch object, which contains data, target, feature names, and more.
+# You can access the data and target as follows:
+X = iris.data  # Features (Sepal length, Sepal width, Petal length, Petal width)
+y = iris.target  # Target variable (0: Setosa, 1: Versicolor, 2: Virginica)
+
+# You can also access feature names and target names:
+feature_names = iris.feature_names
+target_names = iris.target_names
+
+# Print some information about the dataset
+print("Feature Names:", feature_names)
+print("Target Names:", target_names)
+print("Number of Samples:", len(X))
